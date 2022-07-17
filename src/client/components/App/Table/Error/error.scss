@@ -1,0 +1,15 @@
+@import '../../../../styles//variables';
+
+.error {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: 2px solid $error-message;
+    border-radius: 12px;
+    background-color: $error-background;
+
+    &__message {
+        color: $error-message;
+    }
+}

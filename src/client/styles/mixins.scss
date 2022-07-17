@@ -1,0 +1,72 @@
+@import './variables';
+
+@mixin select {
+    padding: 10px 20px;
+    border: 2px solid $blue-color;
+    border-radius: 12px;
+    color: $blue-color;
+    cursor: pointer;
+    transition-property: color, border;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        border-color: $hover-color;
+        color: $hover-color;
+    }
+
+    &:disabled {
+        border-color: $gray-color;
+        color: $gray-color;
+        cursor: auto;
+    }
+}
+
+@mixin input {
+    padding: 10px 15px;
+    border: 2px solid $blue-color;
+    border-radius: 12px;
+    transition-property: color, border;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        border-color: $hover-color;
+    }
+
+    &:disabled {
+        border-color: $gray-color;
+        color: $gray-color;
+
+        &::placeholder {
+            color: $gray-color;
+        }
+    }
+
+    &::placeholder {
+        color: $blue-color;
+    }
+}
+
+@mixin button {
+    min-width: 100px;
+    max-width: 200px;
+    padding: 10px 20px;
+    border: 2px solid $blue-color;
+    border-radius: 12px;
+    word-break: break-all;
+    color: $blue-color;
+    background-color: transparent;
+    cursor: pointer;
+    transition-property: color, border;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        border-color: $hover-color;
+        color: $hover-color;
+    }
+
+    &:disabled {
+        border-color: $gray-color;
+        color: $gray-color;
+        cursor: auto;
+    }
+}
